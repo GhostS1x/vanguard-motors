@@ -18,13 +18,13 @@ export default function LoginPage() {
           <input
             type="email"
             placeholder="E-mail"
-            className="w-full px-4 py-2 bg-gray-800 text-white rounded border border-gray-700 focus:outline-red-500"
+            className="w-full px-4 py-2 bg-zinc-800 text-white rounded border border-zinc-700 focus:outline-red-500"
           />
 
           <input
             type="password"
             placeholder="Senha"
-            className="w-full px-4 py-2 bg-gray-800 text-white rounded border border-gray-700 focus:outline-red-500"
+            className="w-full px-4 py-2 bg-zinc-800 text-white rounded border border-zinc-700 focus:outline-red-500"
           />
 
           <button
@@ -35,7 +35,7 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <p className="text-sm text-gray-400 mt-4 text-center">
+        <p className="text-sm text-zinc-400 mt-4 text-center">
           {isRegister ? "Já tem uma conta?" : "Ainda não tem uma conta?"}{" "}
           <Link
             type="button"

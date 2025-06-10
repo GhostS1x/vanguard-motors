@@ -73,7 +73,7 @@ function MenuItem({ texto, icone, onClick, ativo, danger }) {
           ? "bg-red-600 text-white"
           : danger
           ? "text-red-500 hover:bg-red-950"
-          : "text-gray-300 hover:bg-zinc-800"
+          : "text-zinc-300 hover:bg-zinc-800"
       }`}
     >
       {icone}

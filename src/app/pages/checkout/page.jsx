@@ -104,7 +104,7 @@ export default function CheckoutPage() {
         <div className="bg-zinc-950 p-6 rounded-lg shadow-md h-fit">
           <h2 className="text-2xl font-semibold text-red-500 mb-4">Resumo do Pedido</h2>
 
-          <div className="text-sm text-gray-300 space-y-3">
+          <div className="text-sm text-zinc-300 space-y-3">
             <div className="flex justify-between">
               <span>Alternador 1.6</span>
               <span>R$ 850,00</span>
@@ -113,7 +113,7 @@ export default function CheckoutPage() {
               <span>Disco de Freio</span>
               <span>R$ 373,20</span>
             </div>
-            <div className="flex justify-between border-t border-gray-700 pt-4 mt-4 font-bold">
+            <div className="flex justify-between border-t border-zinc-700 pt-4 mt-4 font-bold">
               <span>Total</span>
               <span className="text-red-500">R$ 1.223,20</span>
             </div>
