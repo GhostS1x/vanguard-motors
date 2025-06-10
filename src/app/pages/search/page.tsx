@@ -82,12 +82,12 @@ export default function SearchPage() {
               <input
                 type="number"
                 placeholder="Min"
-                className="w-1/2 px-3 py-2 rounded-md bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-1/2 px-3 py-2 rounded-md bg-zinc-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-600"
               />
               <input
                 type="number"
                 placeholder="Max"
-                className="w-1/2 px-3 py-2 rounded-md bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-600"
+                className="w-1/2 px-3 py-2 rounded-md bg-zinc-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-600"
               />
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function SearchPage() {
             <input
               type="search"
               placeholder="Buscar peças..."
-              className="w-full sm:w-1/2 px-4 py-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-red-600"
+              className="w-full sm:w-1/2 px-4 py-3 rounded-md text-white bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-red-600"
             />
             <select
               className="mt-4 sm:mt-0 w-full sm:w-48 px-4 py-3 rounded-md bg-zinc-950 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-600"
