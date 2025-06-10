@@ -64,7 +64,7 @@ export default function ProductDetails() {
             </Link>
           </div>
 
-          <ul className="text-sm text-gray-600 space-y-1">
+          <ul className="text-sm text-zinc-300 space-y-1">
             <li>✔️ Envio imediato</li>
             <li>✔️ Garantia de 12 meses</li>
             <li>✔️ Devolução grátis em até 7 dias</li>
@@ -75,13 +75,13 @@ export default function ProductDetails() {
       {/* Descrição detalhada */}
       <section className="max-w-5xl mx-auto px-4 py-10">
         <h2 className="text-2xl font-bold mb-4 text-white">Descrição do produto</h2>
-        <p className="text-zinc-700 mb-4">
+        <p className="text-zinc-300 mb-4">
           Alternador compatível com motores 1.6 Flex de diversas marcas. Produto novo, original de fábrica com alta durabilidade
           e eficiência no carregamento da bateria. Indicado para carros como Gol, Palio, Corsa, Fiesta e similares.
         </p>
 
         <h3 className="text-xl text-white font-semibold mt-6 mb-2">Especificações técnicas:</h3>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
+        <ul className="list-disc list-inside text-gray-300 space-y-1">
           <li>Tensão: 12V</li>
           <li>Corrente máxima: 90A</li>
           <li>Polia de 6 canais</li>
@@ -97,10 +97,10 @@ export default function ProductDetails() {
           {[1, 2].map((i) => (
             <div key={i} className="border border-zinc-200 p-4 rounded-md shadow-sm">
               <div className="flex items-center justify-between mb-2">
-                <strong>Usuário{i}</strong>
+                <strong className="text-zinc-300">Usuário{i}</strong>
                 <span className="text-yellow-500">★★★★★</span>
               </div>
-              <p className="text-gray-700">
+              <p className="text-zinc-300">
                 Produto excelente, chegou no prazo e funcionando perfeitamente. Recomendo a todos que precisam de um alternador confiável!
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function ProductDetails() {
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
-                className="bg-zinc-950 p-4 rounded-lg shadow-md hover:shadow-lg transition"
+                className="bg-zinc-900 p-4 rounded-lg shadow-md hover:shadow-lg transition"
               >
                 <img
                   src="/pecas/disco-freio.png"

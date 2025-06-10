@@ -141,7 +141,7 @@ export default function SearchPage() {
                     R$ {prod.price.toFixed(2).replace(".", ",")}
                   </p>
                   <Link
-                    href="/pages/product"
+                    href="/pages/productDetails"
                     className="flex justify-center justify-items-center w-full bg-red-600 hover:bg-red-700 text-white py-3 px-10 rounded-md font-semibold transition"
                   >
                     <svg

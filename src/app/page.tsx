@@ -1,4 +1,3 @@
-import { Search } from "lucide-react";
 import Link from "next/link";
 import Dropdown from './components//ui/Dropdown';
 
@@ -17,24 +16,22 @@ export default function HomePage() {
 
         {/* Header */}
         <header >
-          <div className="flex relative items-center justify-center gap-60 px-6 py-4 max-w-7xl">
+          <div className="flex relative justify-items-center justify-center gap-60 px-6 py-4 max-w-7xl">
             <div className="text-2xl font-bold">LOGO</div>
             <div className="flex">
               <input
                 type="search"
                 placeholder={"Buscar peças por nome, marca ou modelo"}
-                className="hidden md:block rounded-full px-4 py-2 white bg-black/80 w-[40rem] focus:outline-none"
+                className="rounded-full px-4 py-2 white bg-black/80 w-52 md:w-[40rem] focus:outline-none"
               />
-              <button className="md:hidden px-3 py-2 text-white rounded-md"><Search /></button>
-
+              {/* <button className="md:hidden px-3 py-2 text-white rounded-md"><Search /></button> */}
             </div>
-            <div aria-label="Entrar" className="hover:text-red-400 transition flex">
+            <div aria-label="Entrar" className="hover:text-red-400 transition  md:block">
               <Dropdown />
             </div>
-
           </div>
-          <div className="flex  items-center justify-center">
-            <nav className="hidden relative md:flex space-x-8 font-semibold text-lg">
+          <div className="flex items-center justify-center">
+            <nav className=" relative md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
               {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
                 <a key={cat} href="#" className="hover:text-red-400 transition">
                   {cat}
@@ -130,7 +127,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold mb-1">{title}</h3>
               <p className="mb-3 font-semibold">{price}</p>
-              <button className="mt-auto bg-red-600 hover:bg-red-700 px-4 py-2 rounded flex items-center justify-center gap-2 font-semibold transition">
+              <Link href="/pages/productDetails" className="mt-auto bg-red-600 hover:bg-red-700 px-4 py-2 rounded flex items-center justify-center gap-2 font-semibold transition">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -144,7 +141,7 @@ export default function HomePage() {
                   <circle cx="17" cy="21" r="2" />
                 </svg>
                 Comprar
-              </button>
+              </Link>
             </div>
           ))}
         </div>
