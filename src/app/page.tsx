@@ -30,7 +30,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <nav className=" relative mt-10 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
+            <nav className=" relative mt-16 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
               {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
                 <a key={cat} href="#" className="hover:text-red-400 transition">
                   {cat}
