@@ -8,7 +8,7 @@ export default function HomePage() {
     <main className="min-h-screen bg-gradient-to-b from-red-950 via-red-800 via-30% to-black to-90% text-white">
       <div className="h-screen">
         <div className="">
-         <TriangleBackground/>
+          <TriangleBackground />
         </div>
 
         {/* Header */}
@@ -16,7 +16,7 @@ export default function HomePage() {
           <div className="flex relative justify-items-center justify-center gap-60 px-6 py-4 max-w-7xl">
             <div className="text-2xl font-bold absolute right-72 md:left-22">
               <Image src="/logo1.png" alt="" width={90} height={90}></Image>
-              </div>
+            </div>
             <div className="flex">
               <input
                 type="search"
@@ -25,8 +25,13 @@ export default function HomePage() {
               />
               {/* <button className="md:hidden px-3 py-2 text-white rounded-md"><Search /></button> */}
             </div>
-            <div aria-label="Entrar" className="hover:text-red-400 mt-5 transition absolute right-1 md:block">
-              <Dropdown />
+            <div className="flex">
+              <div aria-label="Entrar" className="hover:text-red-400 md:mx-2 mt-5 transition absolute right-1 md:right-16 md:block">
+                <Dropdown />
+              </div>
+              <div aria-label="Entrar" className="hover:text-red-400 mt-7 transition absolute right-7 hidden md:block">
+                <Link href="/pages/login">Entrar</Link>
+                </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
@@ -144,13 +149,13 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center my-10 justify-items-center text-center">      
-        <Link href="/pages/search" className="bg-red-600 w-56 hover:bg-red-700 px-6 py-3 rounded-lg text-white font-semibold transition">
-        Ver mais
-      </Link>
-      </div>
+        <div className="flex justify-center my-10 justify-items-center text-center">
+          <Link href="/pages/search" className="bg-red-600 w-56 hover:bg-red-700 px-6 py-3 rounded-lg text-white font-semibold transition">
+            Ver mais
+          </Link>
+        </div>
       </section>
-      
+
       {/* Marcas populares */}
       <section className="max-w-7xl mx-auto px-6 pb-16">
         <h2 className="text-3xl font-bold mb-8">Marcas populares</h2>
