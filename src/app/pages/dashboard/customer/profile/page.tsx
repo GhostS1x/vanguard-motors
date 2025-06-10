@@ -11,6 +11,7 @@ export default function ProfilePage() {
                 <form className="space-x-2">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-3">
                         <div className="grid grid-cols-1 gap-4">
+                            <strong className="text-white">Infomações de Login</strong> 
                             <Image src="/perfil.png" width={100} height={100} alt="" className="rounded-full w-60 flex md:hidden h-60"/>
                             <div className="grid">
                                 <label htmlFor="Email" className="text-white">Email</label>
@@ -37,9 +38,10 @@ export default function ProfilePage() {
                                 />
                             </div>
                         </div>
-                        <Image src="/perfil.png" width={100} height={100} alt="" className="rounded-full w-60 hidden md:block h-60"/>
+                        <Image src="/perfil.png" width={100} height={100} alt="" className="rounded-full w-60 hidden md:flex h-60"/>
                     </div>
                     <hr />
+                    <strong className="text-white p-3">Endereço</strong>
                     <div className="p-3 grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="grid">
                             <label htmlFor="Estado" className="text-white">Rua</label>
