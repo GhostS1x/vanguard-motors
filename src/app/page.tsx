@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Dropdown from './components//ui/Dropdown';
 import TriangleBackground from './components/ui/TriangleBackground';
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -13,7 +14,9 @@ export default function HomePage() {
         {/* Header */}
         <header >
           <div className="flex relative justify-items-center justify-center gap-60 px-6 py-4 max-w-7xl">
-            <div className="text-2xl font-bold absolute right-72 md:left-22">LOGO</div>
+            <div className="text-2xl font-bold absolute right-72 md:left-22">
+              <Image src="/logo1.png" alt="" width={90} height={90}></Image>
+              </div>
             <div className="flex">
               <input
                 type="search"
