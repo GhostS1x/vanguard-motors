@@ -9,7 +9,7 @@ export default function ProfilePage() {
                 </h1>
 
                 <form className="space-x-2">
-                    <div className="grid grid-cols-2 gap-4 p-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-3">
                         <div className="grid grid-cols-1 gap-4">
                             <div className="grid">
                                 <label htmlFor="Email" className="text-white">Email</label>
@@ -39,7 +39,7 @@ export default function ProfilePage() {
                         <Image src="/perfil.png" width={100} height={100} alt="" className="rounded-full w-60 h-60"/>
                     </div>
                     <hr />
-                    <div className="p-3 grid grid-cols-2 gap-4">
+                    <div className="p-3 grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="grid">
                             <label htmlFor="Estado" className="text-white">Rua</label>
                             <input
