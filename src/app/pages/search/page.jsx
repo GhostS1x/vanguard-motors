@@ -6,7 +6,7 @@ export default function SearchPage() {
   const products = [
     {
       id: 1,
-      name: "Alternador para motor 1.6 Flex",
+      name: "Alternador para motor 1.6",
       price: 850,
       image: "/pecas/alternador.png",
       rating: 5,
@@ -142,7 +142,7 @@ export default function SearchPage() {
                   </p>
                   <Link
                     href="/pages/product"
-                    className="flex justify-center w-full bg-red-600 hover:bg-red-700 text-white py-3 px-10 rounded-md font-semibold transition"
+                    className="flex justify-center justify-items-center w-full bg-red-600 hover:bg-red-700 text-white py-3 px-10 rounded-md font-semibold transition"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

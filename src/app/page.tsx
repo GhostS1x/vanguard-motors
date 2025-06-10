@@ -1,21 +1,18 @@
-// pages/index.jsx (Next.js)
-
 import { Search } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import Dropdown from './components//ui/Dropdown';
 
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-red-900 via-red-800 to-black text-white">
+    <main className="min-h-screen bg-gradient-to-b from-red-950 via-red-800 via-30% to-black to-90% text-white">
       <div className="h-screen">
         <div className="absolute">
-          <Image width={1420} height={1052}
+          {/* <Image width={1420} height={1052}
             src="/carro-vermelho.png"
             alt="Carro esportivo vermelho"
             className=" object-cover"
-          />
+          /> */}
         </div>
 
         {/* Header */}
@@ -151,8 +148,13 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        <div className="flex justify-center my-10 justify-items-center text-center">      
+        <Link href="/pages/search" className="bg-red-600 w-56 hover:bg-red-700 px-6 py-3 rounded-lg text-white font-semibold transition">
+        Ver mais
+      </Link>
+      </div>
       </section>
-
+      
       {/* Marcas populares */}
       <section className="max-w-7xl mx-auto px-6 pb-16">
         <h2 className="text-3xl font-bold mb-8">Marcas populares</h2>
