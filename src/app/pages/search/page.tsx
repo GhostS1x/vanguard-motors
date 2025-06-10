@@ -104,10 +104,10 @@ export default function SearchPage() {
             <input
               type="search"
               placeholder="Buscar peças..."
-              className="w-full sm:w-1/2 px-4 py-3 rounded-md text-white bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-red-600"
+              className="w-full sm:w-1/2 px-4 py-3 rounded-md text-white bg-zinc-950 focus:outline-none focus:ring-2 focus:ring-red-600"
             />
             <select
-              className="mt-4 sm:mt-0 w-full sm:w-48 px-4 py-3 rounded-md bg-zinc-950 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-600"
+              className="mt-4 sm:mt-0 w-full sm:w-48 px-4 py-3 rounded-md bg-zinc-950 border border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-red-600"
               defaultValue="relevance"
             >
               <option value="relevance">Relevância</option>

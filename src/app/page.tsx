@@ -1,17 +1,13 @@
 import Link from "next/link";
 import Dropdown from './components//ui/Dropdown';
-
+import TriangleBackground from './components/ui/TriangleBackground';
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-red-950 via-red-800 via-30% to-black to-90% text-white">
       <div className="h-screen">
-        <div className="absolute">
-          {/* <Image width={1420} height={1052}
-            src="/carro-vermelho.png"
-            alt="Carro esportivo vermelho"
-            className=" object-cover"
-          /> */}
+        <div className="">
+         <TriangleBackground/>
         </div>
 
         {/* Header */}
