@@ -21,7 +21,7 @@ export default function HomePage() {
               <input
                 type="search"
                 placeholder={"Buscar peças por nome, marca ou modelo"}
-                className="rounded-full px-4 mt-5 py-2 white bg-black/80 w-52 md:w-[40rem] right-16 md:left-90 absolute focus:outline-none"
+                className="rounded-full px-4 mt-5 py-2 white bg-black/80 w-52 md:w-[40rem] right-16 md:left-72 absolute focus:outline-none"
               />
               {/* <button className="md:hidden px-3 py-2 text-white rounded-md"><Search /></button> */}
             </div>
