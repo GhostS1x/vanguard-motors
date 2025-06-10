@@ -1,9 +1,11 @@
-"use client"
+"use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function CadastroPage() {
   const [tipoConta, setTipoConta] = useState("cliente");
+  const [isRegister] = useState(false);
 
   const isVendedor = tipoConta === "vendedor";
 
@@ -83,6 +85,16 @@ export default function CadastroPage() {
         >
           Cadastrar
         </button>
+        <p className="text-sm text-gray-400 mt-4 text-center">
+          {isRegister ? "Ainda não tem uma conta?" : "Já tem uma conta?"}{" "}
+          <Link
+            type="button"
+            href="/pages/login"
+            className="text-red-500 hover:underline ml-1"
+          >
+            {isRegister ? "Cadastrar" : "Entrar"}
+          </Link>
+        </p>
       </div>
 
       {/* Tailwind style shortcut */}

@@ -1,26 +1,19 @@
 "use client"
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function LoginPage() {
-  const [isRegister, setIsRegister] = useState(false);
-  const toggleMode = () => setIsRegister(!isRegister);
+  const [isRegister] = useState(false);
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-black px-4">
       <div className="w-full max-w-md bg-zinc-950 p-8 rounded-xl shadow-xl">
         <h1 className="text-3xl font-bold text-red-600 mb-6 text-center">
-          {isRegister ? "Criar Conta" : "Entrar"}
+          Entrar
         </h1>
 
-        <form className="space-y-4">
-          {isRegister && (
-            <input
-              type="text"
-              placeholder="Nome completo"
-              className="w-full px-4 py-2 bg-gray-800 text-white rounded border border-gray-700 focus:outline-red-500"
-            />
-          )}
+        <form className="space-y-4">   
 
           <input
             type="email"
@@ -34,14 +27,6 @@ export default function LoginPage() {
             className="w-full px-4 py-2 bg-gray-800 text-white rounded border border-gray-700 focus:outline-red-500"
           />
 
-          {isRegister && (
-            <input
-              type="password"
-              placeholder="Confirmar senha"
-              className="w-full px-4 py-2 bg-gray-800 text-white rounded border border-gray-700 focus:outline-red-500"
-            />
-          )}
-
           <button
             type="submit"
             className="w-full py-3 bg-red-600 hover:bg-red-700 text-white rounded font-semibold transition"
@@ -52,13 +37,13 @@ export default function LoginPage() {
 
         <p className="text-sm text-gray-400 mt-4 text-center">
           {isRegister ? "Já tem uma conta?" : "Ainda não tem uma conta?"}{" "}
-          <button
+          <Link
             type="button"
-            onClick={toggleMode}
+            href="/pages/register"
             className="text-red-500 hover:underline ml-1"
           >
-            {isRegister ? "Entrar" : "Criar conta"}
-          </button>
+            {isRegister ? "Entrar" : "Cadastrar"}
+          </Link>
         </p>
       </div>
     </main>

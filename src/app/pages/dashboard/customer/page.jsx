@@ -9,7 +9,7 @@ export default function AreaCliente() {
   return (
     <main className="min-h-screen bg-black text-white flex">
       {/* Menu lateral */}
-      <aside className="hidden md:flex flex-col w-64 bg-gray-900 p-6 border-r border-gray-800">
+      <aside className="hidden md:flex flex-col w-64 bg-zinc-900 p-6 border-r border-gray-800">
         <h2 className="text-2xl font-bold text-red-600 mb-8">Minha Conta</h2>
         <MenuItem
           icone={<ClipboardList size={20} />}
@@ -58,7 +58,7 @@ function MenuItem({ texto, icone, onClick, ativo, danger }) {
           ? "bg-red-600 text-white"
           : danger
           ? "text-red-500 hover:bg-red-950"
-          : "text-gray-300 hover:bg-gray-800"
+          : "text-gray-300 hover:bg-zinc-800"
       }`}
     >
       {icone}
