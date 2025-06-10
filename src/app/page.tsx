@@ -1,103 +1,187 @@
+// pages/index.jsx (Next.js)
+
+import { Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <main className="min-h-screen bg-gradient-to-b from-red-900 via-red-800 to-black text-white">
+      <div className="h-screen">
+      <div className="absolute">
+        <Image width={1420} height={1052}
+          src="/carro-vermelho.png"
+          alt="Carro esportivo vermelho"
+          className=" object-cover"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+      {/* Header */}
+      <header >
+        <div className="flex relative items-center justify-center gap-60 px-6 py-4 max-w-7xl">
+          <div className="text-2xl font-bold">LOGO</div>
+          <div className="flex">
+            <input
+              type="search"
+              placeholder={"Buscar peças por nome, marca ou modelo"}
+              className="hidden md:block rounded-full px-4 py-2 white bg-black/80 w-[40rem] focus:outline-none"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <button className="md:hidden px-3 py-2 text-white rounded-md"><Search /></button>
+
+          </div>
+          <button aria-label="Entrar" className="hover:text-red-400 transition flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 15c2.814 0 5.408.92 7.379 2.476M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="flex  items-center justify-center">
+          <nav className="hidden relative md:flex space-x-8 font-semibold text-lg">
+            {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
+              <a key={cat} href="#" className="hover:text-red-400 transition">
+                {cat}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10" style={{ backgroundImage: "url('/imagens/hero-home.jpg')" }}>
+        <div className="flex-1">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 max-w-lg">
+            Encontre <br />
+            a peça certa <br />
+            para o seu carro, <br />
+            em segundos
+          </h1>
+          <Link href="/pages/search" className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg text-white font-semibold transition">
+            COMEÇAR AGORA
+          </Link>
+        </div>
+      </section>
     </div>
+      {/* Novidades */ }
+  <section className="max-w-7xl mx-auto px-6 py-50">
+    <h2 className="text-3xl font-bold mb-8">Novidades</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      {[
+        {
+          title: 'Alternador',
+          price: 'R$ 850,00',
+          tag: 'NOVIDADE',
+          img: '/pecas/alternador.png',
+        },
+        {
+          title: 'Amortecedor',
+          price: 'R$ 200,00',
+          tag: null,
+          img: '/pecas/amortecedor.png',
+        },
+        {
+          title: 'Pneu All-Season',
+          price: 'R$ 500,00',
+          tag: 'MAIS VENDIDO',
+          img: '/pecas/pneu.png',
+        },
+        {
+          title: 'Disco de Freio',
+          price: 'R$ 186,60',
+          tag: 'DESCONTO',
+          img: '/pecas/disco-freio.png',
+        },
+        {
+          title: 'Roda',
+          price: 'R$ 850,00',
+          tag: 'NOVIDADE',
+          img: '/pecas/alternador.png',
+        },
+        {
+          title: 'Pneu',
+          price: 'R$ 200,00',
+          tag: null,
+          img: '/pecas/amortecedor.png',
+        },
+        {
+          title: 'Bateria',
+          price: 'R$ 500,00',
+          tag: 'MAIS VENDIDO',
+          img: '/pecas/pneu.png',
+        },
+        {
+          title: 'Pastilha de freio',
+          price: 'R$ 186,60',
+          tag: 'DESCONTO',
+          img: '/pecas/disco-freio.png',
+        },
+      ].map(({ title, price, tag, img }) => (
+        <div
+          key={title}
+          className="bg-gradient-to-br hover:text-red-400 transition from-red-900 to-black rounded-lg shadow-lg p-4 relative flex flex-col"
+        >
+          {tag && (
+            <span className="absolute top-2 left-2 bg-red-700 px-3 py-1 rounded font-semibold text-sm uppercase">
+              {tag}
+            </span>
+          )}
+          <img
+            src={img}
+            alt={title}
+            className="mx-auto mb-4 max-h-40 object-contain"
+            loading="lazy"
+          />
+          <h3 className="text-lg font-semibold mb-1">{title}</h3>
+          <p className="mb-3 font-semibold">{price}</p>
+          <button className="mt-auto bg-red-600 hover:bg-red-700 px-4 py-2 rounded flex items-center justify-center gap-2 font-semibold transition">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
+              <circle cx="7" cy="21" r="2" />
+              <circle cx="17" cy="21" r="2" />
+            </svg>
+            Comprar
+          </button>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Marcas populares */ }
+  <section className="max-w-7xl mx-auto px-6 pb-16">
+    <h2 className="text-3xl font-bold mb-8">Marcas populares</h2>
+    <div className="flex justify-center gap-10 flex-wrap">
+      {[
+        '/marcas/volkswagen.svg',
+        '/marcas/toyota.svg',
+        '/marcas/chevrolet.svg',
+        '/marcas/bmw.svg',
+        '/marcas/fiat.svg',
+        '/marcas/ford.svg',
+        '/marcas/honda.svg',
+      ].map((logo, i) => (
+        <img
+          key={i}
+          src={logo}
+          alt="Marca popular"
+          className="h-12 object-contain filter brightness-75 hover:brightness-100 transition cursor-pointer"
+        />
+      ))}
+    </div>
+  </section>
+    </main >
   );
 }
