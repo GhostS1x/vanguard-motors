@@ -46,7 +46,7 @@ export default function HomePage() {
         </header>
 
         {/* Hero Section */}
-        <section className="relative max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10" style={{ backgroundImage: "url('/imagens/hero-home.jpg')" }}>
+        <section className="relative max-w-7xl mx-auto px-6 py-26 flex flex-col md:flex-row items-center gap-10" style={{ backgroundImage: "url('/imagens/hero-home.jpg')" }}>
           <div className="flex-1">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 max-w-lg">
               Encontre <br />
