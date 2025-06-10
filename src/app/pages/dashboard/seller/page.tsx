@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import {
   Boxes,
   ClipboardList,
@@ -9,8 +9,11 @@ import {
   BarChart3,
 } from "lucide-react";
 
+// Tipos possíveis de abas
+type Aba = "dashboard" | "produtos" | "pedidos" | "config";
+
 export default function PainelVendedor() {
-  const [abaAtiva, setAbaAtiva] = useState("dashboard");
+  const [abaAtiva, setAbaAtiva] = useState<Aba>("dashboard");
 
   return (
     <main className="min-h-screen bg-black text-white flex">
@@ -64,7 +67,16 @@ export default function PainelVendedor() {
   );
 }
 
-function MenuItem({ texto, icone, onClick, ativo, danger }) {
+// Tipagem das props do MenuItem
+type MenuItemProps = {
+  texto: string;
+  icone: ReactNode;
+  onClick: () => void;
+  ativo?: boolean;
+  danger?: boolean;
+};
+
+function MenuItem({ texto, icone, onClick, ativo = false, danger = false }: MenuItemProps) {
   return (
     <button
       onClick={onClick}

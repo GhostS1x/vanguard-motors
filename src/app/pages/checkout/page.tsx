@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from 'react';
 
@@ -13,7 +13,10 @@ export default function CheckoutPage() {
     pagamento: 'pix',
   });
 
-  const handleChange = (e) => {
+  // Tipagem correta para inputs e selects
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };

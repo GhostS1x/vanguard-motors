@@ -160,13 +160,13 @@ export default function HomePage() {
         <h2 className="text-3xl font-bold mb-8">Marcas populares</h2>
         <div className="flex justify-center gap-10 flex-wrap">
           {[
-            '/marcas/volkswagen.svg',
-            '/marcas/toyota.svg',
-            '/marcas/chevrolet.svg',
-            '/marcas/bmw.svg',
-            '/marcas/fiat.svg',
-            '/marcas/ford.svg',
-            '/marcas/honda.svg',
+            '/marcas/volkswagen.png',
+            '/marcas/toyota.png',
+            '/marcas/chevrolet.png',
+            '/marcas/bmw.png',
+            '/marcas/fiat.png',
+            '/marcas/ford.png',
+            '/marcas/honda.png',
           ].map((logo, i) => (
             <img
               key={i}

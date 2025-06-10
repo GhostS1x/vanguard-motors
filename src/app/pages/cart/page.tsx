@@ -1,10 +1,18 @@
-"use client"
+"use client";
 
 import Link from 'next/link';
 import { useState } from 'react';
 
+type CartItem = {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+};
+
 export default function CarrinhoPage() {
-  const [cartItems, setCartItems] = useState([
+  const [cartItems, setCartItems] = useState<CartItem[]>([
     {
       id: 1,
       name: 'Alternador 1.6 Flex',
@@ -21,7 +29,7 @@ export default function CarrinhoPage() {
     },
   ]);
 
-  const updateQuantity = (id, change) => {
+  const updateQuantity = (id: number, change: number) => {
     setCartItems((prev) =>
       prev.map((item) =>
         item.id === id
@@ -31,11 +39,14 @@ export default function CarrinhoPage() {
     );
   };
 
-  const removeItem = (id) => {
+  const removeItem = (id: number) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
 
-  const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const total = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   return (
     <main className="min-h-screen bg-black text-white px-4 py-10">
@@ -43,7 +54,9 @@ export default function CarrinhoPage() {
         <h1 className="text-3xl font-bold mb-8 text-red-600">Seu Carrinho</h1>
 
         {cartItems.length === 0 ? (
-          <p className="text-center text-gray-400 text-xl">Seu carrinho está vazio.</p>
+          <p className="text-center text-gray-400 text-xl">
+            Seu carrinho está vazio.
+          </p>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Lista de produtos */}
@@ -102,7 +115,10 @@ export default function CarrinhoPage() {
                 <span>Frete</span>
                 <span>A calcular</span>
               </div>
-              <Link href="/pages/checkout" className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-md font-semibold transition">
+              <Link
+                href="/pages/checkout"
+                className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-md font-semibold transition block text-center"
+              >
                 Finalizar Compra
               </Link>
             </div>
