@@ -19,7 +19,7 @@ export default function Modal() {
             </div>
 
             {isOpen && (
-                <div className="relative transition-all justify-items-center justify-center md:mt-2 md:w-[40rem] md:h-[25rem] rounded-md shadow-lg bg-zinc-800 ">
+                <div className="relative transition-all justify-items-center justify-center md:mt-2 p-5 rounded-md shadow-lg bg-zinc-800 ">
                     <div className="py-1" role="menu">
 
                         <button onClick={() => setIsOpen(false)} className='text-white'><X /></button>
