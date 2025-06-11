@@ -21,8 +21,8 @@ export default function CadastroPage() {
             onClick={() => setTipoConta("cliente")}
             className={`px-4 py-2 rounded font-semibold transition ${
               tipoConta === "cliente"
-                ? "bg-red-600 text-white"
-                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                ? "bg-red-600 text-white rounded"
+                : "bg-gray-700 text-gray-300 hover:bg-gray-600  rounded"
             }`}
           >
             Cliente
@@ -31,8 +31,8 @@ export default function CadastroPage() {
             onClick={() => setTipoConta("vendedor")}
             className={`px-4 py-2 rounded font-semibold transition ${
               tipoConta === "vendedor"
-                ? "bg-red-600 text-white"
-                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                ? "bg-red-600 text-white  rounded"
+                : "bg-gray-700 text-gray-300 hover:bg-gray-600  rounded"
             }`}
           >
             Vendedor
@@ -41,39 +41,40 @@ export default function CadastroPage() {
 
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
           {/* Campos comuns */}
-          <input className="input" type="text" placeholder="Nome completo" />
-          <input className="input" type="email" placeholder="E-mail" />
-          <input className="input" type="password" placeholder="Senha" />
-          <input
-            className="input"
-            type="password"
-            placeholder="Confirmar senha"
-          />
-          <input className="input" type="text" placeholder="Telefone" />
-          <input className="input" type="text" placeholder="CPF ou CNPJ" />
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Nome completo" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="email" placeholder="E-mail" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="password" placeholder="Senha" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="password" placeholder="Confirmar senha" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Telefone" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="CPF ou CNPJ" />
 
           {/* Endereço */}
-          <input className="input" type="text" placeholder="CEP" />
-          <input className="input" type="text" placeholder="Rua" />
-          <input className="input" type="text" placeholder="Número" />
-          <input className="input" type="text" placeholder="Complemento" />
-          <input className="input" type="text" placeholder="Bairro" />
-          <input className="input" type="text" placeholder="Cidade" />
-          <input className="input" type="text" placeholder="Estado" />
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="CEP" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Rua" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Número" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Complemento" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Bairro" />
+
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Cidade" />
+          
+          <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Estado" />
 
           {/* Campos extras para vendedor */}
           {isVendedor && (
             <>
-              <input className="input" type="text" placeholder="Nome da loja" />
-              <input
-                className="input"
-                type="text"
-                placeholder="Tipo de vendedor (Física/Jurídica)"
+              <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Nome da loja" />
+              <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Tipo de vendedor (Física/Jurídica)"
               />
-              <input
-                className="input"
-                type="text"
-                placeholder="Instagram / Redes sociais (opcional)"
+              <input className="input bg-zinc-900 p-2 rounded border border-zinc-700" type="text" placeholder="Instagram / Redes sociais (opcional)"
               />
             </>
           )}
