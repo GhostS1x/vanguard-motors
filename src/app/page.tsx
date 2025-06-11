@@ -13,15 +13,15 @@ export default function HomePage() {
 
         {/* Header */}
         <header >
-          <div className="flex relative justify-items-center justify-center gap-60 px-6 py-4 max-w-7xl">
-            <div className="text-2xl font-bold absolute right-72 md:left-22">
+          <div className="grid grid-cols-3 relative justify-items-center justify-center gap-60 px-6 py-4 max-w-7xl">
+            <div className="text-2xl font-bold">
               <Image src="/logo1.png" alt="" width={90} height={90}></Image>
             </div>
-            <div className="flex">
+            <div className="flex justify-items-center">
               <input
                 type="search"
                 placeholder={"Buscar peças por nome, marca ou modelo"}
-                className="rounded-full shadow px-4 mt-5 py-2 white bg-black/80 w-52 md:w-[40rem] right-16 md:left-72 lg:left-82 absolute focus:outline-none"
+                className="rounded-full shadow px-4 mt-5 h-10 white bg-black/80 w-52 md:w-[40rem] focus:outline-none"
               />
               {/* <button className="md:hidden px-3 py-2 text-white rounded-md"><Search /></button> */}
             </div>
@@ -31,11 +31,11 @@ export default function HomePage() {
               </div>
               <div aria-label="Entrar" className="hover:text-red-400 mt-7 transition absolute right-7 hidden md:block">
                 <Link href="/pages/login">Entrar</Link>
-                </div>
+              </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <nav className=" relative mt-16 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
+            <nav className=" relative mt-16 md:mt-0 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
               {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
                 <a key={cat} href="#" className="hover:text-red-400 transition">
                   {cat}
