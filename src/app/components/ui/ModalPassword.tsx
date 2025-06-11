@@ -30,7 +30,7 @@ export default function Modal() {
                                 <input
                                     type="password"
                                     placeholder=""
-                                    className="w-62 px-4 py-2 bg-zinc-700 text-white rounded border border-zinc-700 focus:outline-red-500"
+                                    className="w-52 md:w-62 px-4 py-2 bg-zinc-700 text-white rounded border border-zinc-700 focus:outline-red-500"
                                 />
                             </div>
                             <div className="grid">
@@ -38,7 +38,7 @@ export default function Modal() {
                                 <input
                                     type="password"
                                     placeholder=""
-                                    className="w-62 px-4 py-2 bg-zinc-700 text-white rounded border border-zinc-700 focus:outline-red-500"
+                                    className="w-52 md:w-62 px-4 py-2 bg-zinc-700 text-white rounded border border-zinc-700 focus:outline-red-500"
                                 />
                             </div>
                             <div className="grid">
@@ -46,7 +46,7 @@ export default function Modal() {
                                 <input
                                     type="password"
                                     placeholder=""
-                                    className="w-62 px-4 py-2 bg-zinc-700 text-white rounded border border-zinc-700 focus:outline-red-500"
+                                    className="w-52 md:w-62 px-4 py-2 bg-zinc-700 text-white rounded border border-zinc-700 focus:outline-red-500"
                                 />
                             </div>
                             <button
