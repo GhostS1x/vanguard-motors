@@ -1,3 +1,4 @@
+import Modal from "@/app/components/ui/ModalPassword";
 import Image from "next/image";
 
 export default function ProfilePage() {
@@ -25,7 +26,7 @@ export default function ProfilePage() {
                                 <label htmlFor="Senha" className="text-white">Senha</label>
                                 <input
                                     type="password"
-                                    placeholder="Estado"
+                                    placeholder="Senha"
                                     className="w-62 px-4 py-2 bg-zinc-800 text-white rounded border border-zinc-700 focus:outline-red-500"
                                 />
                             </div>
@@ -44,11 +45,7 @@ export default function ProfilePage() {
                     <strong className="text-white p-3">Segurança</strong>
                     <div className="grid p-3">
                         <label htmlFor="Telefone" className="text-white">Alterar senha</label>
-                        <input
-                            type="password"
-                            placeholder="Senha"
-                            className="w-96 px-4 py-2 bg-zinc-800 text-white rounded border border-zinc-700 focus:outline-red-500"
-                        />
+                        <Modal></Modal>
                     </div>
                     <hr />
                     <strong className="text-white p-3">Endereço</strong>
