@@ -39,7 +39,7 @@ export default function SearchPage() {
       {/* Container geral */}
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Filtros */}
-        <aside className="bg-zinc-950 p-6 rounded-lg shadow-lg">
+        <aside className="bg-zinc-950 border border-zinc-700 p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-red-600">Filtros</h2>
 
           <div className="mb-5">
@@ -104,7 +104,7 @@ export default function SearchPage() {
             <input
               type="search"
               placeholder="Buscar peças..."
-              className="w-full sm:w-1/2 px-4 py-3 rounded-md text-white bg-zinc-950 focus:outline-none focus:ring-2 focus:ring-red-600"
+              className="w-full sm:w-1/2 px-4 py-3 rounded-md border border-zinc-700 text-white bg-zinc-950 focus:outline-none focus:ring-2 focus:ring-red-600"
             />
             <select
               className="mt-4 sm:mt-0 w-full sm:w-48 px-4 py-3 rounded-md bg-zinc-950 border border-zinc-700 text-white focus:outline-none focus:ring-2 focus:ring-red-600"
@@ -122,7 +122,7 @@ export default function SearchPage() {
             {products.map((prod) => (
               <div
                 key={prod.id}
-                className="bg-zinc-950 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition cursor-pointer"
+                className="bg-zinc-950 border border-zinc-700 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition cursor-pointer"
               >
                 <img
                   src={prod.image}
