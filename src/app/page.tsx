@@ -17,14 +17,25 @@ export default function HomePage() {
             <div className="text-2xl font-bold">
               <Image src="/logo1.png" alt="" width={90} height={90}></Image>
             </div>
-            <div className="flex justify-items-center">
+
+            <div className="grid justify-items-center">
               <input
                 type="search"
                 placeholder={"Buscar peças por nome, marca ou modelo"}
-                className="rounded-full shadow px-4 mt-5 h-10 white bg-black/80 w-52 md:w-[40rem] focus:outline-none"
+                className="rounded-full grid shadow px-4 mt-5 h-10 white bg-black/80 w-52 md:w-[40rem] focus:outline-none"
               />
+              <div className="grid items-center justify-center">
+            <nav className=" relative mt-16 md:mt-0 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
+              {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
+                <a key={cat} href="#" className="hover:text-red-400 transition">
+                  {cat}
+                </a>
+              ))}
+            </nav>
+          </div>
               {/* <button className="md:hidden px-3 py-2 text-white rounded-md"><Search /></button> */}
             </div>
+
             <div className="flex">
               <div aria-label="Entrar" className="hover:text-red-400 md:mx-2 mt-5 transition absolute right-1 md:right-16 md:block">
                 <Dropdown />
@@ -34,15 +45,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center">
-            <nav className=" relative mt-16 md:mt-0 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
-              {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
-                <a key={cat} href="#" className="hover:text-red-400 transition">
-                  {cat}
-                </a>
-              ))}
-            </nav>
-          </div>
+          
         </header>
 
         {/* Hero Section */}

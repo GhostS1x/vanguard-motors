@@ -11,8 +11,8 @@ export default function ProfilePage() {
                 <form className="space-x-2">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-3">
                         <div className="grid grid-cols-1 gap-4">
-                            <strong className="text-white">Infomações de Login</strong> 
-                            <Image src="/perfil.png" width={100} height={100} alt="" className="rounded-full w-60 flex md:hidden h-60"/>
+                            <strong className="text-white">Infomações de Login</strong>
+                            <Image src="/perfil.png" width={100} height={100} alt="" className="rounded-full w-60 flex md:hidden h-60" />
                             <div className="grid">
                                 <label htmlFor="Email" className="text-white">Email</label>
                                 <input
@@ -38,7 +38,17 @@ export default function ProfilePage() {
                                 />
                             </div>
                         </div>
-                        <Image src="/perfil.png" width={100} height={100} alt="" className="rounded-full w-60 hidden md:flex h-60"/>
+                        <Image src="/perfil.png" width={100} height={100} alt="" className="rounded-full w-60 hidden md:flex h-60" />
+
+                    </div>
+                    <strong className="text-white p-3">Segurança</strong>
+                    <div className="grid p-3">
+                        <label htmlFor="Telefone" className="text-white">Alterar senha</label>
+                        <input
+                            type="password"
+                            placeholder="Senha"
+                            className="w-96 px-4 py-2 bg-zinc-800 text-white rounded border border-zinc-700 focus:outline-red-500"
+                        />
                     </div>
                     <hr />
                     <strong className="text-white p-3">Endereço</strong>
