@@ -1,5 +1,6 @@
 "use client";
 
+import NavBar from "@/app/components/layout/NavBar";
 import Link from "next/link";
 
 export default function SearchPage() {
@@ -37,9 +38,11 @@ export default function SearchPage() {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Container geral */}
+      <NavBar></NavBar>
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+        
         {/* Filtros */}
-        <aside className="bg-zinc-950 border border-zinc-700 p-6 rounded-lg shadow-lg">
+        <aside className="bg-zinc-950 border border-zinc-700 p-6 mt-20 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-red-600">Filtros</h2>
 
           <div className="mb-5">

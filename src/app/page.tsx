@@ -25,7 +25,7 @@ export default function HomePage() {
                 className="rounded-full grid shadow px-4 mt-5 h-10 white bg-black/80 w-52 md:w-[40rem] focus:outline-none"
               />
               <div className="grid items-center justify-center">
-            <nav className=" relative mt-16 md:mt-0 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
+            <nav className=" relative mt-3 md:mt-0 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
               {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
                 <a key={cat} href="#" className="hover:text-red-400 transition">
                   {cat}
