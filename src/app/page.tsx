@@ -14,7 +14,7 @@ export default function HomePage() {
         {/* Header */}
         <header >
           <div className="grid grid-cols-3 relative justify-items-center justify-center gap-60 px-6 py-4 max-w-7xl">
-            <div className="text-2xl font-bold absolute left-0">
+            <div className="text-2xl font-bold absolute left-0 md:left-10">
               <Image src="/logo1.png" alt="" width={90} height={90}></Image>
             </div>
 
