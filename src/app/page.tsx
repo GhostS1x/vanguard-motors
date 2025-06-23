@@ -14,18 +14,18 @@ export default function HomePage() {
         {/* Header */}
         <header >
           <div className="grid grid-cols-3 relative justify-items-center justify-center gap-60 px-6 py-4 max-w-7xl">
-            <div className="text-2xl font-bold">
+            <div className="text-2xl font-bold absolute left-0">
               <Image src="/logo1.png" alt="" width={90} height={90}></Image>
             </div>
 
-            <div className="grid justify-items-center">
+            <div className="grid justify-items-center absolute">
               <input
                 type="search"
                 placeholder={"Buscar peças por nome, marca ou modelo"}
                 className="rounded-full grid shadow px-4 mt-5 h-10 white bg-black/80 w-52 md:w-[40rem] focus:outline-none"
               />
               <div className="grid items-center justify-center">
-            <nav className=" relative mt-3 md:mt-0 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
+            <nav className=" relative mt-5 md:mt-0 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
               {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
                 <a key={cat} href="#" className="hover:text-red-400 transition">
                   {cat}
