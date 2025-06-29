@@ -20,7 +20,7 @@ export default function HomePage() {
               <input
                 type="search"
                 placeholder="Buscar peças por nome, marca ou modelo"
-                className="rounded-full shadow px-4 mt-2 h-10 bg-black/80 text-white w-52 md:w-[40rem] focus:outline-none"
+                className="rounded-full shadow px-4 mt-2 h-10 bg-black/80 text-white w-52 md:w-[30rem] lg:w-[40rem] focus:outline-none"
               />
               <nav className="mt-3 max-w-[20rem] md:w-[38rem] flex justify-center gap-2 md:gap-5 text-sm font-semibold md:text-lg">
                 {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Exteriores'].map((cat) => (
