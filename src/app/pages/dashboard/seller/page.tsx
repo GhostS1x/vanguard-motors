@@ -8,9 +8,10 @@ import {
   LogOut,
   BarChart3,
 } from "lucide-react";
+import ProductRegister from "@/app/components/product/ProductRegister";
 
 // Tipos possíveis de abas
-type Aba = "dashboard" | "produtos" | "pedidos" | "config";
+type Aba = "dashboard" | "produtos" | "addprodutos" | "pedidos" | "config";
 
 export default function PainelVendedor() {
   const [abaAtiva, setAbaAtiva] = useState<Aba>("dashboard");
@@ -32,6 +33,12 @@ export default function PainelVendedor() {
           texto="Meus Produtos"
           ativo={abaAtiva === "produtos"}
           onClick={() => setAbaAtiva("produtos")}
+        />
+        <MenuItem
+          icone={<Boxes size={20} />}
+          texto="Cadastrar Produto"
+          ativo={abaAtiva === "addprodutos"}
+          onClick={() => setAbaAtiva("addprodutos")}
         />
         <MenuItem
           icone={<ClipboardList size={20} />}
@@ -60,6 +67,7 @@ export default function PainelVendedor() {
       <section className="flex-1 p-6">
         {abaAtiva === "dashboard" && <Dashboard />}
         {abaAtiva === "produtos" && <Produtos />}
+        {abaAtiva === "addprodutos" && <AddProdutos />}
         {abaAtiva === "pedidos" && <Pedidos />}
         {abaAtiva === "config" && <Configuracoes />}
       </section>
@@ -108,6 +116,15 @@ function Produtos() {
     <div>
       <h2 className="text-xl font-bold text-red-500 mb-4">Meus Produtos</h2>
       <p className="text-gray-300">Aqui o vendedor pode ver e gerenciar seus anúncios.</p>
+    </div>
+  );
+}
+function AddProdutos() {
+  return (
+    <div>
+      <h2 className="text-xl font-bold text-red-500 mb-4">Cadastrar Produtos</h2>
+      <p className="text-gray-300">Aqui o vendedor pode cadastrar seus produtos</p>
+      <ProductRegister></ProductRegister>
     </div>
   );
 }

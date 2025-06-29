@@ -11,7 +11,8 @@ export default function Dropdown() {
       <div>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex justify-center w-full rounded-md  px-4 py-2  text-sm font-medium  "
+          type='button'
+          className="inline-flex justify-center w-full rounded-md  px-4 py-2  text-sm font-medium"
         >
           <svg
               xmlns="http://www.w3.org/2000/svg"
