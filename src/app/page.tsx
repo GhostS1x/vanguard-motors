@@ -12,23 +12,24 @@ export default function HomePage() {
 
             {/* Logo */}
             <div className="text-2xl font-bold">
-              <Image src="/logo1.png" alt="" width={90} height={90} />
+              <Image src="/logo1.png" alt="" width={90} height={90} className="w-16 h-16 md:w-[90px] md:w-[90px]" />
             </div>
 
             {/* Input e navegação */}
-            <div className="grid grid-cols-1 justify-center justify-items-center items-center ">
+            <div className="grid grid-cols-1 mt-5 justify-center justify-items-center items-center ">
               <input
                 type="search"
                 placeholder="Buscar peças por nome, marca ou modelo"
                 className="rounded-full shadow px-4 mt-2 h-10 bg-black/80 text-white w-52 md:w-[40rem] focus:outline-none"
               />
-              <nav className="mt-3 md:w-[38rem] grid grid-cols-6  justify-center justify-items-center gap-3 text-sm font-semibold md:text-lg">
+              <nav className="mt-3 max-w-[20rem] md:w-[38rem] flex justify-center gap-2 md:gap-5 text-sm font-semibold md:text-lg">
                 {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Exteriores'].map((cat) => (
                   <a key={cat} href="#" className="hover:text-red-400 transition">
                     {cat}
                   </a>
                 ))}
               </nav>
+
             </div>
 
             {/* Ações à direita */}
@@ -46,7 +47,7 @@ export default function HomePage() {
 
 
         {/* Hero Section */}
-        <section className="relative max-w-7xl mx-auto px-6 py-26 flex flex-col md:flex-row items-center gap-10" style={{ backgroundImage: "url('/imagens/hero-home.jpg')" }}>
+        <section className="relative max-w-7xl mx-auto px-6 py-30 flex flex-col md:flex-row items-center gap-10" style={{ backgroundImage: "url('/imagens/hero-home.jpg')" }}>
           <div className="flex-1">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 max-w-lg">
               Encontre <br />
