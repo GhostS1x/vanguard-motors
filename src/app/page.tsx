@@ -7,37 +7,43 @@ export default function HomePage() {
     <main className="min-h-screen bg-gradient-to-b from-red-950 via-red-800 via-30% to-black to-90% text-white">
       <div className="h-screen">
         {/* Header */}
-        <header >
-          <div className="grid grid-cols-3 relative justify-items-center justify-center gap-60 px-6 py-4 max-w-7xl">
-            <div className="text-2xl font-bold absolute left-0 md:left-10">
-              <Image src="/logo1.png" alt="" width={90} height={90}></Image>
+        <header>
+          <div className="grid grid-cols-3 items-center gap-6 px-6 py-4 max-w-7xl mx-auto">
+
+            {/* Logo */}
+            <div className="text-2xl font-bold">
+              <Image src="/logo1.png" alt="" width={90} height={90} />
             </div>
-            <div className="grid justify-items-center absolute">
+
+            {/* Input e navegação */}
+            <div className="grid grid-cols-1 justify-center justify-items-center items-center ">
               <input
                 type="search"
-                placeholder={"Buscar peças por nome, marca ou modelo"}
-                className="rounded-full grid shadow px-4 mt-5 h-10 white bg-black/80 w-52 md:w-[40rem] focus:outline-none"
+                placeholder="Buscar peças por nome, marca ou modelo"
+                className="rounded-full shadow px-4 mt-2 h-10 bg-black/80 text-white w-52 md:w-[40rem] focus:outline-none"
               />
-              <div className="grid items-center justify-center">
-                <nav className=" relative mt-5 md:mt-0 md:flex md:space-x-8 space-x-2 text-sm font-semibold md:text-lg">
-                  {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Extériores'].map((cat) => (
-                    <a key={cat} href="#" className="hover:text-red-400 transition">
-                      {cat}
-                    </a>
-                  ))}
-                </nav>
-              </div>
+              <nav className="mt-3 md:w-[38rem] grid grid-cols-6  justify-center justify-items-center gap-3 text-sm font-semibold md:text-lg">
+                {['Motor', 'Suspensão', 'Pneus', 'Freios', 'Interior', 'Exteriores'].map((cat) => (
+                  <a key={cat} href="#" className="hover:text-red-400 transition">
+                    {cat}
+                  </a>
+                ))}
+              </nav>
             </div>
-            <div className="flex">
-              <div aria-label="Entrar" className="hover:text-red-400 md:mx-2 mt-5 transition absolute right-1 md:right-16 md:flex">
+
+            {/* Ações à direita */}
+            <div className="flex justify-end items-center gap-4">
+              <div aria-label="Dropdown" className="hover:text-red-400 transition">
                 <Dropdown />
               </div>
-              <div aria-label="Entrar" className="hover:text-red-400 mt-7 transition absolute right-7 hidden md:flex">
+              <div aria-label="Entrar" className="hover:text-red-400 transition hidden md:block">
                 <Link href="/pages/login">Entrar</Link>
               </div>
             </div>
+
           </div>
         </header>
+
 
         {/* Hero Section */}
         <section className="relative max-w-7xl mx-auto px-6 py-26 flex flex-col md:flex-row items-center gap-10" style={{ backgroundImage: "url('/imagens/hero-home.jpg')" }}>
