@@ -53,7 +53,7 @@ export default function HomePage() {
               Encontre <br />
               a peça certa <br />
               para o seu carro, <br />
-              em segundos MUMU
+              em segundos
             </h1>
             <Link href="/pages/search" className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg text-white font-semibold transition">
               COMEÇAR AGORA
